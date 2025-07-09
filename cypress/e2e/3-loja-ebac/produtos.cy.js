@@ -12,8 +12,10 @@ describe('Funcionalidade: Produtos', () => {
             cy.get('.block-inner')
                 // .first()
                 // .last()
-                .eq(2)
+                .eq(2) // Posição 3
                 .click()
+
+            cy.get('#tab-title-description > a').should('contain', 'Descrição')
     });
 
     it('Deve selecionar um produto da lista - Usando o Nome', () => {
